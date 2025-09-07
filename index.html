@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Home</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <div class="nav-links" id="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="experience.html" class="nav-link">Experience</a>
+      <a href="skills.html" class="nav-link">Skills</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="about-image">
+      <img src="assets/src/me.png" alt="Hassib Baraketi">
+    </div>
+    <div class="about-text">
+      <h1>Hi, I'm Hassib Baraketi</h1>
+      <p>Full Stack Developer <br> (Web & Mobile)</p>
+      <a href="assets/src/CV__hassib.pdf" download class="btn">Download CV</a>
+    </div>
+    
+  </div>
+  
+</section>
+
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>

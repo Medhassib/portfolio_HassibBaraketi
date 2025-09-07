@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Home</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <div class="nav-links" id="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="experience.html" class="nav-link">Experience</a>
+      <a href="skills.html" class="nav-link">Skills</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+<section class="experience">
+  <h2>My Experiences</h2>
+
+  <div class="bubbles-container">
+    
+    <div class="bubble" onclick="openModal('Intermetal')">
+      <img src="assets/src/in.jpg" alt="Intermetal">
+      <h3>Introductory Internship at Intermetal</h3>
+      <p class="bubble-date">Jan - Feb 2023</p>
+    </div>
+
+
+    <div class="bubble" onclick="openModal('TunisieT')">
+      <img src="assets/src/TT.png" alt="Tunisie Télécom">
+      <h3>Professional Development Internship at Tunisie Télécom</h3>
+      <p class="bubble-date">Jan - Feb 2024</p>
+    </div>
+
+    <div class="bubble" onclick="openModal('Carthaginian')">
+      <img src="assets/src/car.png" alt="Carthaginian">
+      <h3>Final Year Intership at Carthaginian Light House</h3>
+      <p class="bubble-date">Feb - May 2025</p>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 id="modal-title"></h2>
+    <h4 id="modal-subtitle"></h4>
+    <p id="modal-date" class="modal-date"></p>
+    <p id="modal-description"></p>
+  </div>
+</div>
+
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("active");
+    }const modal = document.getElementById('modal');
+const modalTitle = document.getElementById('modal-title');
+const modalSubtitle = document.getElementById('modal-subtitle');
+const modalDate = document.getElementById('modal-date');
+const modalDescription = document.getElementById('modal-description');
+
+const experiences = {
+
+
+  Intermetal: {
+    title: "Introductory Internship",
+    subtitle: "Rades , Tunisia",
+    date: "Jan - Feb 2023",
+    description: "Developed skills in HTML/CSS and explored network architectures"
+  },
+
+  TunisieT: {
+    title: "Professional Development Internship at Tunisie Télécom",
+    subtitle: "Tunis",
+    date: "Jan - Feb 2024",
+    description: "Enhanced cross-cultural communication, learned European approaches to tech and management, and expanded my professional network internationally."
+  },
+  Carthaginian: {
+    title: "Final Year Internship (Full-Stack Developer)",
+    subtitle: "Tunis",
+    date: "Feb - May 2025",
+    description: "Designed and developed a web/mobile application for incident management Technologies used: React.js, Express.js, MySQL, Node.js, Ionic Implemented a RESTful API and a responsive user interface."
+  }
+};
+
+function openModal(key) {
+  const exp = experiences[key];
+  modalTitle.textContent = exp.title;
+  modalSubtitle.textContent = exp.subtitle;
+  modalDate.textContent = exp.date;
+  modalDescription.textContent = exp.description;
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  modal.style.display = "none";
+}
+
+// Close modal when clicking outside content
+window.onclick = function(event) {
+  if (event.target === modal) {
+    closeModal();
+  }
+};
+
+  </script>
+</body>
+</html>

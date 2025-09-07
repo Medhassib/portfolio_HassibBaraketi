@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Projects</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <div class="nav-links" id="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="experience.html" class="nav-link">Experience</a>
+      <a href="skills.html" class="nav-link">Skills</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <section class="projects">
+    <div class="project-grid">
+         <!-- First Project -->
+      <div class="project">
+        <div class="project-details">
+          <h3>Incident management solution</h3>
+          <p>A platform designed for streamlined incident management, providing a robust and user-friendly web and mobile application.</p>
+          <a href="https://github.com/Medhassib/PFE-mobile" target="_blank" class="view-project">View Project</a>
+          <div class="technologies">
+            <div class="tech-badge">ReactJs</div>
+            <div class="tech-badge">Node.js</div>
+            <div class="tech-badge">MySQL</div>
+            <div class="tech-badge">Ionic</div>
+          </div>
+
+          <!-- Image Gallery -->
+          <div class="image-gallery">
+            <div class="thumbnail">
+              <img src="assets/src/homep.png" alt="Project Image" class="gallery-thumbnail" onclick="openZoom('assets/src/homep.png')">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+     
+      <!-- First Project -->
+      <div class="project">
+        <div class="project-details">
+          <h3>Training Management System</h3>
+          <p>A platform designed for efficient scheduling and resource management of training sessions within a bank.</p>
+          <div class="technologies">
+            <div class="tech-badge">Angular</div>
+            <div class="tech-badge">Node.js</div>
+            <div class="tech-badge">MySQL</div>
+            <div class="tech-badge">Express.js</div>
+          </div>
+
+          <!-- Image Gallery -->
+          <div class="image-gallery">
+            <div class="thumbnail">
+              <img src="assets/src/train.jpeg" alt="Project Image" class="gallery-thumbnail" onclick="openZoom('assets/src/train.jpeg')">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+     
+
+     
+     
+    </div>
+  </section>
+
+
+  <div class="modal" id="modal" onclick="closeZoom()">
+    <div class="modal-content">
+      <span class="close" onclick="closeZoom()">×</span>
+      <img id="modal-image" class="modal-image" src="" alt="Zoomed Image">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+ 
+</body>
+</html>
